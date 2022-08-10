@@ -1,0 +1,46 @@
+fof-nightmode:
+    ref:
+        auto: 全自動（根據設備或瀏覽器設定自動切換）
+        light: 日間模式
+        dark: 夜間模式
+
+    admin:
+        settings:
+            modal:
+                always_show_theme_toggle_on_header: 始終在論壇標題上顯示主題切換按鈕
+                default_theme: 默認論壇主題
+                default_theme_helper: 默認主題是為新用戶、訪客和未設置偏好的用戶自動設置的。
+                theme_auto: => fof-nightmode.ref.auto
+                theme_light: => fof-nightmode.ref.light
+                theme_dark: => fof-nightmode.ref.dark
+    forum:
+        day: => fof-nightmode.ref.light
+        night: => fof-nightmode.ref.dark
+
+        header:
+            nightmode_button: 日夜間模式切換
+
+        user:
+            settings:
+                heading: Theme
+                description: 選擇您要瀏覽 Kater 的閱讀模式
+                description2: 選擇選項後，您所選擇的瀏覽模式將統一到所有登入裝置，除非您開啟「每台裝置不統一閱讀模式」
+                device_specific_setting_checkbox: 每台裝置不統一閱讀模式
+                device_specific_setting_checkbox_tooltip: 您的設定將會各自單獨儲存。
+                auto_unsupported: 你使用的瀏覽器不支援自動切換日夜間模式
+                options:
+                    auto: => fof-nightmode.ref.auto
+                    day: => fof-nightmode.ref.light
+                    night: => fof-nightmode.ref.dark
+                option_descriptions:
+                    auto: 你已開啟全自動設置，假如你的設備設定是夜間模式，那麼網站也是夜間的，如果是日間，那麼網站也會是。
+                    day: 你已開啟日間模式，白色就是漂亮！
+                    night: 你已開啟夜間模式，防止螢幕眩光的最佳選擇！
+
+fof-default-user-preferences:
+    admin:
+        settings:
+            fofNightMode: "FoF Nightmode: 使用默認模式"
+            fofNightMode-help: "0 - 全自動, 1 - 日間模式, 2 - 夜間模式"
+            fofNightMode_perDevice: "FoF Nightmode: 根據設備設定使用"
+            fofNightMode_perDevice-help: Use per device preferences for nightmode settings

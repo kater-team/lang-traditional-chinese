@@ -1,0 +1,14 @@
+# https://github.com/FriendsOfFlarum/socialprofile/blob/master/resources/locale/en.yml
+# Mon, 23 Mar 2020 10:55:41 +0800
+
+fof-socialprofile:
+  forum:
+    edit:
+      edit: 編輯
+      add: 新增
+      headtitle: 編輯按鈕
+      title: 標題
+      url: 連結
+      submit: 儲存
+      delete: 刪除
+      deletetitle: 刪除按鈕

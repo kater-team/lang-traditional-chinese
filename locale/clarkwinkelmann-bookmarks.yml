@@ -1,0 +1,15 @@
+clarkwinkelmann-bookmarks:
+    forum:
+        dropdownButton:
+            add: 加入書籤
+            remove: 移除書籤
+        independentButton:
+            add: 書籤
+            remove: 已加入書籤
+        badge: 書籤
+        page:
+            link: 書籤
+            title: 書籤
+    admin:
+        settings:
+            independentButton: 在文章回覆按鈕下方中顯示書籤物件，而不是在下拉選單顯示

@@ -1,0 +1,17 @@
+flarum-lock:
+    admin:
+        permissions:
+            lock_discussions_label: 鎖定文章
+    forum:
+        badge:
+            locked_tooltip: 鎖定
+        discussion_controls:
+            lock_button: 鎖定文章
+            unlock_button: 解鎖文章
+        notifications:
+            discussion_locked_text: '{username} 鎖定文章'
+        post_stream:
+            discussion_locked_text: '{username} 鎖定此文章'
+            discussion_unlocked_text: '{username} 解鎖此文章'
+        settings:
+            notify_discussion_locked_label: 你的文章被鎖定

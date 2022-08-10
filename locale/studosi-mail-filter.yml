@@ -1,0 +1,52 @@
+# https://github.com/studosi-flarum/mail-filter/blob/master/locale/en.yml
+# Mon, 23 Mar 2020 10:55:41 +0800
+
+studosi-mail-filter:
+    admin:
+        nav:
+            title: 電子郵件過濾
+            desc: 允許和禁止註冊的電子郵件
+
+        settings:
+            rule:
+                name_placeholder: 規則名稱
+
+                delete:
+                    question: "確定要刪除規則「{rule_name}」？"
+                    yes: 是
+                    no: 否
+
+        whitelist:
+            label: 白名單
+            desc: 嚴格匹配
+            placeholder: 新增電子郵件...
+
+        whitelist_regex:
+            label: 正規表示式
+            desc: 正規表示式匹配
+            placeholder: 新增白名單正規表示式...
+
+        blacklist:
+            label: 黑名單
+            desc: 嚴格匹配
+            placeholder: 新增電子郵件...
+
+        blacklist_regex:
+            label: 正規表示式
+            desc: 正規表示式匹配
+            placeholder: 新增黑名單正規表示式...
+
+        import:
+            label: 匯入設定
+            desc: 匯入電子郵件白名單、黑名單及白名單正規表示式、黑名單正規表示式。
+            button: 匯入
+
+        error:
+            invalid_regex: "無效的正規表示式。"
+
+    forum:
+        error:
+            generic: "遇到錯誤，請聯絡論壇管理員。"
+
+            blacklisted: "這個電子郵件或電子郵件後綴不在論壇黑名單中。"
+            not_whitelisted: "這個電子郵件或電子郵件後綴不在論壇白名單中。"

@@ -1,0 +1,12 @@
+flarum-statistics:
+    admin:
+        statistics:
+            active_users_text: '{count} 活躍用戶'
+            discussions_heading: 文章
+            last_12_months_label: 最近12個月
+            last_28_days_label: 最近28天
+            last_7_days_label: 最近7天
+            posts_heading: 文章
+            today_label: 今天
+            total_label: 累計
+            users_heading: 會員

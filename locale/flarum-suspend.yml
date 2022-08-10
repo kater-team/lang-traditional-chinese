@@ -1,0 +1,20 @@
+flarum-suspend:
+    admin:
+        permissions:
+            suspend_users_label: 停用使用者
+    forum:
+        notifications:
+            user_suspended_text: '{username} 停用了你 {timeReadable}'
+            user_unsuspended_text: '{username} 停用了你'
+        suspend_user:
+            indefinitely_label: 無限期停用
+            limited_time_label: 有限期停用...
+            limited_time_days_text: ' 天'
+            not_suspended_label: 不停用
+            status_heading: 停用狀態
+            submit_button: 儲存更改
+            title: '{username} 已被停用'
+        user_badge:
+            suspended_tooltip: 已停用
+        user_controls:
+            suspend_button: 停用
