@@ -1,66 +1,95 @@
+core:
+  forum:
+    index_sort:
+      hot_button: 最多推數
+      votes_button: 推數
+
 fof-gamification:
-    forum:
-        votes: 點讚
-        vote_title: 顯示點讚的人
-        nav:
-            name: 排名
-        ranking:
-            rank: 排位
-            name: 用戶
-            amount: 👍
-        notification:
-            upvote: '{username} 讚了您的文章'
-            downvote: '{username} 踩了您的文章'
-        user:
-            points: '👍: {points}'
-            rank: '{rank}'
-        modal:
-            title: 打分
-            upvotes_label: 讚
-            downvotes_label: 踩
-        mod_item: 查看點讚的人
-    admin:
-        permissions:
-            vote_label: 讚/踩文章
-            see_votes_label: 查看文章讚/踩
-            see_ranking_page: 查看等級頁面
-        nav:
-            desc: '增強 Flarum 論壇遊戲性'
-        page:
-            rankings:
-                blocked:
-                    placeholder: 'CDK2020, Ralkage, AngelAvila'
-                    title: 忽略的用戶
-                    help: '這些用戶不會在排名頁面上顯示。 用戶名應以逗號分隔，後跟空格。'
-                title: 排名頁面
-                enable: 啟用自定義圖片
-                custom_image_1: 冠軍圖片
-                custom_image_2: 亞軍圖片
-                custom_image_3: 季軍圖片
-            votes:
-                points_title: 佔位符
-                points_placeholder: '👍: '
-                color_holder: '#ffffff'
-                auto_upvote: 當文章發佈時自動點讚
-                rate_limit: '點讚頻率限制（10 秒）'
-                discussion_page: 在文章列表中顯示點讚數
-                title: 讚
-                vote_color: 點讚文章顏色
-                icon_name: 讚/踩小圖示
-                icon_help: '輸入任何 Font-Awesome 圖標，後綴為 -up 和 -down。 示例：箭頭，拇指，人字紋'
-                alternate_layout: '使用仿 Reddit 投票佈局'
-            save_settings: 儲存設定
-            convert:
-                button: 轉換「喜歡」為「讚」
-                help: '將 flarum-ext-like 產生的「喜歡」轉換成「讚」，並計算所有當前討論的熱度'
-                converting: 您的喜好正在被轉換，稍後幾分鐘刷新頁面查看轉換結果。（轉換可能需要一段時間，具體取決於您的論壇）
-                converted: '成功轉換 {number} 個喜歡'
-            ranks:
-                title: 等級
-                ranks: 自定義評分
-                number_title: 要顯示多少個徽章？
-                help:
-                    color: '#ffffff'
-                    help: 輸入所需數量的點讚數，級別名稱，以及等級顏色
-                    points: 👍
-                    name: 名稱
+  forum:
+    votes: 按推
+    vote_title: 顯示按推的人
+    nav:
+      name: 排名
+    ranking:
+      rank: 排位
+      name: 用戶
+      amount: 👍
+    notification:
+      upvote: '{username} 推了您的文章'
+      downvote: '{username} 噓了您的文章'
+      prefrences:
+        vote: 當我的文章被按下推/噓時
+    user:
+      card:
+        points: "{count, plural, one { {count} point} other {{count} points}}"
+      rank: "{rank}"
+      votes_link: 投票
+    modal:
+      downvotes_label: '他們反對'
+      title: 投票詳情
+      upvotes_label: '他們同意'
+    mod_item: 投票詳情
+    voters:
+      none: 暫無投票
+      label: 投票詳情
+      label_none: 暫無投票
+    post:
+      upvote_button: 推
+      downvote_button: 噓
+  admin:
+    permissions:
+      vote_label: 推/噓文章
+      see_votes_label: 查看帖子推/噓
+      see_voters_label: 查看誰評分
+      see_ranking_page: 查看排名頁面
+      upvote_notifications: 收到「推」通知
+      downvote_notifications: 收到「噓」通知
+    page:
+      rankings:
+        blocked:
+          placeholder: CDK2020, Ralkage, AngelAvila
+          title: 忽略的用戶
+          help: '這些用戶不會在排名頁面上顯示。 使用者名稱應以半形逗號分隔，後跟空格。'
+        title: 排名頁面
+        enable: 啟用自訂圖片
+        custom_image_1: 冠軍標誌
+        custom_image_2: 亞軍標誌
+        custom_image_3: 季軍標誌
+      alt_votes:
+        icon_name: 布局圖示名稱
+      votes:
+        points_title: 佔位符
+        points_placeholder: "👍： "
+        color_holder: '#ffffff'
+        auto_upvote: 當文章發布時自動按推
+        rate_limit: 按推頻率限制（10 秒）
+        discussion_page: 在文章列表中顯示推數
+        alternate_layout: 使用仿 Reddit 投票布局（全部文章列表）
+        alternate_post_layout: '使用仿 Reddit 投票布局（帖子頁面）'
+        title: 投票
+        vote_color: 按推顏色
+        icon_name: 推噓圖示
+        icon_help: "輸入任何 Font Awesome 圖示，後綴為 -up 和 -down。 範例：arrow（箭頭），thumbs（拇指），chevron（指向箭頭）"
+        upvotes_only: 禁用噓
+        first_post_only: 僅一樓開放推噓功能
+      save_settings: 儲存設定
+      convert:
+        button: 轉換「喜歡」為「推」
+        help: '將 flarum-ext-like 產生的「喜歡」轉換成「讚」，並計算所有當前討論的熱度'
+        converting: 您的喜好正在被轉換，稍後幾分鐘刷新頁面查看轉換結果。（轉換可能需要一段時間，具體取決於您的網站）
+        converted: '成功轉換 {number} 個喜歡'
+      ranks:
+        title: 等級
+        ranks: 自訂評分
+        number_title: 要顯示多少個徽章？
+        help:
+          color: '#ffffff'
+          help: 輸入所需數量的按讚數，級別名稱，以及等級顏色
+          points: 👍
+          name: 名稱
+  email:
+    body:
+      postVoted: "{recipient_display_name} 你好！\n\n{actor_display_name} 剛剛投票了你的文章「{discussion_title}」。\n\n查看詳情：{discussion_url}\n"
+      View it here: "{discussion_url}"
+    subject:
+      postVoted: "{display_name} 對你的文章投票"
