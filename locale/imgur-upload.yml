@@ -4,9 +4,16 @@
 imgur-upload:
   admin:
     settings:
-        title: Imgur 上傳設定
+      hide-markdown-image: 隱藏 Markdown 圖片按鈕
+      allow-paste: 允許使用貼上功能直接上傳圖片
+      embed-type:
+        title: 插入類型
+        preview-with-link: 預覽圖 (1024px) 並導向至原圖
+        preview-without-link: 無連結預覽圖
+        full-with-link: 全尺寸原圖帶超連結
+        full-without-link: 全尺寸原圖無連結
   forum:
-    upload: 點擊或貼上以上傳
-    loading: 正在上傳...
+    upload: 移動或貼上上傳
+    loading: 上傳中...
     done: 完成！
     error: 錯誤

@@ -63,7 +63,7 @@ flarum-tags:
             added_tags_text: '{username} 新增節點 {tagsAdded}'
             added_and_removed_tags_text: '{username} 添加節點 {tagsAdded} 並移除節點 {tagsRemoved}'
             removed_tags_text: '{username} 移除節點 {tagsRemoved}'
-            tags_text: '{tags}|{tags}'
+            tags_text: "{count, plural, one {{tags} 節點} other {{tags} 節點}}"
         tag:
             meta_description_text: '{tag} 節點下的全部文章'
     lib:

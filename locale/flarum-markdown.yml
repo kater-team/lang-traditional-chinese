@@ -1,12 +1,14 @@
 flarum-markdown:
-    forum:
+    lib:
         composer:
-            bold_tooltip: 加粗文本
+            bold_tooltip: 加粗文字
             code_tooltip: 插入程式碼
             header_tooltip: 新增標題
             image_tooltip: 新增圖片
-            italic_tooltip: 新增斜體文本
+            italic_tooltip: 新增斜體文字
             link_tooltip: 新增連結
             ordered_list_tooltip: 新增有序列表
             quote_tooltip: 插入引用
+            spoiler_tooltip: 加入劇透文字
+            strikethrough_tooltip: 加入文字刪除線
             unordered_list_tooltip: 新增無序列表

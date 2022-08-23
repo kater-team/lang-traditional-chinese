@@ -1,42 +1,88 @@
-# https://github.com/FriendsOfFlarum/username-request/blob/master/resources/locale/en.yml
-# Mon, 30 Sep 2019 22:17:29 +0800
-
 fof-username-request:
   admin:
     permissions:
-      start: 申請變更用戶名
-      moderate: 同意變更用戶名
+      moderate_requests: 批准更改使用者名稱/暱稱
+      request_nickname: 申請更改暱稱
+      request_username: 申請更改使用者名稱
   forum:
-    action:
-      title: => fof-username-request.forum.results.title
-      help_text: 確認用戶名遵循論壇規則
-      decision_title: 決議
-      approval_label: 同意
-      rejected_label: 拒絕
-      submit_button: 提交
-      reason_title: 拒絕原因
-      success: 決議已傳送
-      name: '{username} 申請變更用戶名為「{newUsername}」'
-    results:
-      title: 變更用戶名
-      approved: '您的變更用戶名的申請已通過！'
-      new_username: '您的用戶名已變更為「{username}」'
-      rejected: 您的變更用戶名申請已遭拒。
-      reason: '拒絕原因： <i>"{reason}"</i>'
-      resubmit: 您可以重新提交一個新的用戶名。
-    request:
-      title: 申請變更用戶名
-      current_request: 您已申請變更用戶名為「{username}」，您可以更新或刪除該申請。
-      submit_button: 提交申請
-      delete_button: 刪除申請
-      confirmation_message: 您的申請已收到並將在稍後進行審核。
-      dismiss_button: 明白
-      deleted: 申請已刪除。
-    account_label: 變更用戶名
-    profile_link: 用戶名歷史
-    dropdown:
-      empty_text: 暫無申請
-      tooltip: => fof-username-request.forum.dropdown.title
-      title: 用戶名變更申請
-      item_text: "{username} 申請變更用戶名"
-      exerpt: "申請變更用戶名為： {requestedUsername}"
+    nickname_modals:
+      action:
+        approval_label: 批准
+        decision_title: 決定
+        help_text: 請您確保暱稱沒有違反社群規範。
+        name: '{name} 申請將暱稱更改為「{requestedName}」'
+        reason_title: 駁回原因
+        rejected_label: 駁回
+        submit_button: 提交
+        success: 決定已送出。
+        title: 使用者名稱變更請求
+      request:
+        confirmation_message: 您的暱稱更改請求已經提交，請等待批准。
+        current_request: '您已申請將您的暱稱改為「{name}」。您可以更新或刪除請求。'
+        delete_button: 刪除請求
+        deleted: 已刪除暱稱請求。
+        dismiss_button: 好的
+        submit_button: 提交請求
+        title: 申請更改暱稱
+      results:
+        approved: 您的暱稱更改已批准
+        dismiss_button: 好的
+        new_name: '您的暱稱已成功更改為：{name}'
+        reason: '駁回原因：<i>「{reason}」</i>.'
+        rejected: 您的暱稱更改已被駁回
+        resubmit: 您可以在帳戶設定中重新提交請求。
+        title: 暱稱更改請求
+
+    username_modals:
+      action:
+        approval_label: 批准
+        decision_title: 決定
+        help_text: 請確保使用者名稱沒有違反社區規範。
+        name: '{name} 申請將使用者名稱更改為「{requestedName}」'
+        reason_title: 駁回原因
+        rejected_label: 駁回
+        submit_button: 提交
+        success: 決定已送出。
+        title: 使用者名稱變更請求
+      request:
+        confirmation_message: 您的暱稱更改請求已經提交，請等待批准。
+        current_request: '您已申請將您的暱稱改為「{name}」。您可以更新或刪除請求。'
+        delete_button: 刪除請求
+        deleted: 已刪除使用者名稱請求。
+        dismiss_button: 好的
+        submit_button: 提交請求
+        title: 申請更改使用者名稱
+      results:
+        approved: 您的使用者名稱更改依批准
+        dismiss_button: 好的
+        new_name: '您的使用者名稱已成功更改為：{name}'
+        reason: '駁回原因：<i>「{reason}」</i>.'
+        rejected: 您的使用者名稱更改已被駁回
+        resubmit: 您可以在帳戶設定中重新提交請求。
+        title: 使用者名稱更改請求
+
+    # 待處理的請求頁面與下拉列表
+    pending_requests:
+      empty_text: 沒有找到名稱更改請求。
+      nickname_exerpt: '請求暱稱：{requestedName}'
+      nickname_item_text: '{name} 請求更改暱稱'
+      title: 名稱變更請求
+      tooltip: => fof-username-request.ref.name_change_requests
+      username_exerpt: '請求使用者名稱：{requestedName}'
+      username_item_text: '{name} 請求更改使用者名稱'
+
+    # 設定頁面
+    settings:
+      nickname_request_button: 更改暱稱
+      username_request_button: 更改使用者名稱
+
+    user:
+      name_history_link: 使用者名稱歷史
+
+  ref:
+    name_change_request: 名稱更改請求
+    name_change_requests: 使用者名稱更改請求
+    nickname_change_request: 暱稱更改請求
+    nickname_change_requests: 暱稱更改請求
+    username_change_request: 使用者名稱更改請求
+    username_change_requests: 使用者名稱更改請求
