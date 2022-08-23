@@ -14,11 +14,11 @@ dayjs.locale({
     L: 'YYYY/MM/DD',
     LL: 'YYYY年M月D日',
     LLL: 'YYYY年M月D日 HH:mm',
-    LLLL: 'YYYY年M月D日 dddd HH:mm',
+    LLLL: 'YYYY年M月D日 dddd HH:mm:ss',
     l: 'YYYY/M/D',
     ll: 'YYYY年M月D日',
     lll: 'YYYY年M月D日 HH:mm',
-    llll: 'YYYY年M月D日 dddd HH:mm'
+    llll: 'YYYY年M月D日 dddd HH:mm:ss'
   },
   relativeTime: {
     future: '%s內',
