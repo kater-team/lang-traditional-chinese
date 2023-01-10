@@ -1,36 +1,78 @@
 flarum-subscriptions:
-    forum:
-        badge:
-            following_tooltip: 關注
-            ignoring_tooltip: 無視
-        discussion_controls:
-            follow_button: 關注
-            unfollow_button: 取消關注
-            unignore_button: 取消無視
-        index:
-            following_link: 關注
-        notifications:
-            new_post_text: '{username} 回覆了你關注的文章'
-        settings:
-            follow_after_reply_label: 自動關注我回覆的文章
-            notify_new_post_label: 關注的文章有新回覆
-        sub_controls:
-            follow_button: 關注
-            following_button: 關注
-            following_text: 有新回覆時通知我
-            ignoring_button: 無視
-            ignoring_text: 不接收任何通知並從文章列表中隱藏。
-            not_following_button: 不關注
-            not_following_text: 僅當被標註時通知我
-            notify_alert_tooltip: 有新回覆時發送通知
-            notify_email_tooltip: 有新回覆時發送郵件
-        following:
-            meta_title_text: 關注中
-    ref:
-        follow: 關注
-        following: 關注
-        ignoring: 無視
-    email:
-        new_post:
-            body: "{recipient_display_name}，您好！\n\n您關注的文章《{title}》，【{poster_display_name}】發表了新內容\n\n點擊下方連結即可查看完整內容。\n{url}\n\n---\n\n{content}\n\n---\n\n在您已讀前，您不會再收到任何關於這個主題的通知。"
-            subject: '【新文章】{title}'
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      following_tooltip: => flarum-subscriptions.ref.following
+      ignoring_tooltip: => flarum-subscriptions.ref.ignoring
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      unfollow_button: 取消關注
+      unignore_button: 忽略
+
+    # These translations are used on the page that displays all subscriptions.
+    following:
+      meta_title_text: => flarum-subscriptions.ref.following
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      following_link: => flarum-subscriptions.ref.following
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      new_post_text: "{username} 發布"
+
+    # These translations are used in the Settings page.
+    settings:
+      follow_after_reply_label: 自動關注我回复的討論
+      notify_for_all_posts_label: 通知每個新帖子，而不僅僅是討論中的最後一個
+      notify_new_post_label: 有人在我關注的討論中發帖
+
+    # These translations are used in the subscription menu displayed to the right of the post stream.
+    sub_controls:
+      follow_button: => flarum-subscriptions.ref.follow
+      following_button: => flarum-subscriptions.ref.following
+      following_text: 收到所有答复的通知。
+      ignoring_button: => flarum-subscriptions.ref.ignoring
+      ignoring_text: 永遠不會被通知。從討論列表中隱藏。
+      not_following_button: 不關注
+      not_following_text: "僅在@mentioned 時收到通知。"
+      notify_alert_tooltip: 有新帖子時收到論壇通知
+      notify_email_tooltip: 有新帖子時收到電子郵件
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+    # These translations are used in emails sent when a post is made in a subscribed discussion
+    new_post:
+      subject: '【新文章】{title}'
+      body: |
+        您好 {recipient_display_name}!
+
+        您關注的文章《{title}》，【{poster_display_name}】發表了新內容
+
+        點擊下方連結即可查看完整內容。:
+        {url}
+
+        ---
+
+        {content}
+
+        ---
+
+        在您已讀前，您不會再收到任何關於這個主題的通知。
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # Translations in this namespace are referenced by two or more unique keys.
+  ref:
+    follow: 關注
+    following: 關注中
+    ignoring: 忽略
