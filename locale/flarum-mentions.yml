@@ -1,34 +1,103 @@
 flarum-mentions:
-    forum:
-        composer:
-            mention_tooltip: 標註某人或文章
-            reply_to_post_text: '回覆給 #{number}'
-        notifications:
-            others_text: '{count} 人|{count} 人'
-            post_mentioned_text: '{username} 回覆了你的文章'
-            user_mentioned_text: '{username} 標註了你'
-        post:
-            mentioned_by_self_text: '{users} 回覆了此文章'
-            mentioned_by_text: '{users} 回覆了此文章'
-            others_text: '{count} 人|{count} 人'
-            quote_button: 引用
-            reply_link: 回覆
-            you_text: 你
-        settings:
-            notify_post_mentioned_label: 有人回覆了你
-            notify_user_mentioned_label: 有人標註了你
-        user:
-            mentions_link: 標註
-        post_mention:
-            deleted_text: '[未知]'
-    admin:
-        settings:
-            allow_username_format_label: 允許@用戶名
-            allow_username_format_text: "默認標註格式為「@暱稱#ID」\n此設置允許使用舊格式「@用戶名」，但是保存後仍將自動轉換為新格式。"
-    email:
-        post_mentioned:
-            body: "{recipient_display_name}，您好！\n\n{replier_display_name} 回覆了您在《{title}》(#{post_number}) 的發言：\n\n{url}\n\n---\n\n{content}"
-            subject: '{replier_display_name} 回覆您【{title}】'
-        user_mentioned:
-            body: "{recipient_display_name}，您好！\n\n{mentioner_display_name} 在《{title}》標註了您：\n\n{url}\n\n---\n\n{content}"
-            subject: '{mentioner_display_name} 標註您【{title}】'
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the mentions permissions
+    permissions:
+      mention_groups_label: 標註组
+    # These translations are used in the mentions Settings page.
+    settings:
+      allow_username_format_label: 允許@用戶名
+      allow_username_format_text: |
+        默認標註格式為「@暱稱#ID」。
+        此設置允許使用舊格式「@用戶名」，但是保存後仍將自動轉換為新格式。
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the composer (reply autocompletion function).
+    composer:
+      mention_tooltip: 標註某人或文章
+      reply_to_post_text: '回覆給 #{number}'
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      others_text: => core.ref.some_others
+      post_mentioned_text: '{username} 回覆了你的文章' # Can be pluralized to agree with the number of users!
+      user_mentioned_text: '{username} 標註了你'
+      group_mentioned_text: "{username} 標註了您所屬的群組"
+
+    # These translations are displayed beneath individual posts.
+    post:
+      mentioned_by_self_text: '{users} 回覆了此文章'  # Can be pluralized to agree with the number of users!
+      mentioned_by_text: '{users} 回覆了此文章'     # Can be pluralized to agree with the number of users!
+      others_text: => core.ref.some_others
+      quote_button: 引用
+      reply_link: => core.ref.reply
+      you_text: => core.ref.you
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_post_mentioned_label: 有人回覆了你
+      notify_user_mentioned_label: 有人標註了你
+      notify_group_mentioned_label: 有人在帖子中標註了我所屬的群組
+
+    # These translations are used in the user profile page and profile popup.
+    user:
+      mentions_link: 標註
+
+    # These translations are used in the post mentions
+    post_mention:
+      deleted_text: '[未知]'
+
+    group_mention:
+      deleted_text: '[未知 群组]'
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a post is replied to
+    post_mentioned:
+      subject: '{replier_display_name} 回覆您【{title}】'
+      body: |
+        {recipient_display_name}，您好!
+
+        {replier_display_name} 回覆了您在《{title}》(#{post_number}) 的發言：
+
+        {url}
+
+        ---
+
+        {content}
+
+    # These translations are used in emails sent when a user is mentioned
+    user_mentioned:
+      subject: '{mentioner_display_name} 標註您【{title}】'
+      body: |
+        {recipient_display_name}，您好!
+
+        {mentioner_display_name} 在《{title}》標註了您：
+
+        {url}
+
+        ---
+
+        {content}
+    # These translations are used in emails sent when a group is mentioned
+    group_mentioned:
+      subject: "{mentioner_display_name} 在《{title}》標註了我所屬的群組 "
+      body: |
+        {recipient_display_name}，您好!
+
+        {mentioner_display_name} 在《{title}》標註了我所屬的群組 。
+
+        {url}
+
+        ---
+
+        {content}
